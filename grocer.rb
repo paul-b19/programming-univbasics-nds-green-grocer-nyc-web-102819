@@ -123,7 +123,7 @@ end
 
 def apply_clearance(cart)
   #cart_clearance = []
-  index = 1 
+  index = 0 
   
   while index < cart.count do
     if cart[index][:clearance]
