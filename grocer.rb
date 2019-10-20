@@ -122,7 +122,6 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
-  #cart_clearance = []
   index = 0 
   
   while index < cart.count do
@@ -133,7 +132,6 @@ def apply_clearance(cart)
   end
   
   cart
-  #cart_clearance
 end
 
 def checkout(cart, coupons)
