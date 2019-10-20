@@ -140,7 +140,7 @@ def checkout(cart, coupons)
   # * apply_coupons
   # * apply_clearance
   
-  total = Float
+  total = 0
   con_cart = consolidate_cart(cart)
   
   if coupons == []
