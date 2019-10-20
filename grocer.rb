@@ -97,13 +97,6 @@ def calculation(item, coupon)
     
   else
     two_hashes << item
-    # pp two_hashes
-    
-    # with = item
-    # with[:item] += " W/COUPON"
-    # with[:price] = item_price_with
-    # with[:count] = 0
-    # two_hashes << with
   end
   
   two_hashes
