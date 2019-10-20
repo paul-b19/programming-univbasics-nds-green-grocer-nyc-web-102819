@@ -71,17 +71,15 @@ end
 def calculation(item, coupon)
 
   two_hashes = []
-  
   items_count_without = item[:count] % coupon[:num]
   items_count_with = item[:count] - items_count_without
   item_price_with = coupon[:cost] / coupon[:num]
   
   if item[:count] >= coupon[:num]
-    # items_count_without = item[:count] % coupon[:num]
-    # items_count_with = item[:count] - items_count_without
     
-    two_hashes[0] = {}
-    two_hashes[1] = {}
+    two_hashes = [{}, {}]
+    # two_hashes[0] = {}
+    # two_hashes[1] = {}
     without = two_hashes[0]
     with = two_hashes[1]
     
