@@ -95,7 +95,7 @@ def calculation(item, coupon)
       without = 0 
       with = 1 
       
-      two_hashes[with, without] = item
+      two_hashes[without, with] = item
       pp two_hashes
       # without = item
       # without[:count] = items_count_without
