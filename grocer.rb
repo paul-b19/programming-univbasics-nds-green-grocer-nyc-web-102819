@@ -105,6 +105,7 @@ def calculation(item, coupon)
       # pp with
       with[:count] = items_count_with
       pp with
+      pp without
       two_hashes << with
       # pp two_hashes
     end
