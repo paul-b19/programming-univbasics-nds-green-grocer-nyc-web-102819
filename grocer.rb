@@ -105,8 +105,8 @@ def calculation(item, coupon)
       pp two_hashes
     end
   else
-    two_hashes << item
-    pp two_hashes
+    # two_hashes << item
+    # pp two_hashes
     
     # with = item
     # with[:item] += " W/COUPON"
