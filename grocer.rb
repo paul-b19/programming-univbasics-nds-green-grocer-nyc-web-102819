@@ -79,40 +79,23 @@ def calculation(item, coupon)
   
   if item[:count] >= coupon[:num]
     items_count_without = item[:count] % coupon[:num]
-    if items_count_without == 0 
-      # without = item
-      # without[:count] = 0
-      # two_hashes << without
-      two_hashes[0] = {}
-      two_hashes[1] = {}
-      without = two_hashes[0]
-      with = two_hashes[1]
-      
-      
-      with = item
-      with[:item] += " W/COUPON"
-      with[:price] = item_price_with
-      two_hashes << with
-      # pp two_hashes
-    else
-      items_count_with = item[:count] - items_count_without
-      
-      two_hashes[0] = {}
-      two_hashes[1] = {}
-      without = two_hashes[0]
-      with = two_hashes[1]
-      
-      without[:item] = item[:item]
-      without[:price] = item[:price]
-      without[:clearance] = item[:clearance]
-      without[:count] = items_count_without
-      
-      with[:item] = item[:item] + " W/COUPON"
-      with[:price] = item_price_with
-      with[:clearance] = item[:clearance]
-      with[:count] = items_count_with
-      
-    end
+    items_count_with = item[:count] - items_count_without
+    
+    two_hashes[0] = {}
+    two_hashes[1] = {}
+    without = two_hashes[0]
+    with = two_hashes[1]
+    
+    without[:item] = item[:item]
+    without[:price] = item[:price]
+    without[:clearance] = item[:clearance]
+    without[:count] = items_count_without
+    
+    with[:item] = item[:item] + " W/COUPON"
+    with[:price] = item_price_with
+    with[:clearance] = item[:clearance]
+    with[:count] = items_count_with
+    
   else
     two_hashes << item
     # pp two_hashes
