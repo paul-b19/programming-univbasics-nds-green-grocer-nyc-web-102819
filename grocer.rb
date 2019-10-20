@@ -83,6 +83,11 @@ def calculation(item, coupon)
       # without = item
       # without[:count] = 0
       # two_hashes << without
+      two_hashes[0] = {}
+      two_hashes[1] = {}
+      without = two_hashes[0]
+      with = two_hashes[1]
+      
       
       with = item
       with[:item] += " W/COUPON"
