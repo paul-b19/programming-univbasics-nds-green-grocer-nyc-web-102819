@@ -69,8 +69,8 @@ def consolidate_cart(cart)
 end
 
 def calculation(item, coupon)
-  pp item
-  pp coupon
+  # pp item
+  # pp coupon
   two_hashes = []
   
   items_count_without = 0
@@ -88,6 +88,7 @@ def calculation(item, coupon)
       with[:item] += " W/COUPON"
       with[:price] = item_price_with
       two_hashes << with
+      pp two_hashes
     else
       items_count_with = item[:count] - items_count_without
       
@@ -105,6 +106,7 @@ def calculation(item, coupon)
     end
   else
     two_hashes << item
+    pp two_hashes
     
     # with = item
     # with[:item] += " W/COUPON"
