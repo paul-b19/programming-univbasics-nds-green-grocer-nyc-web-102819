@@ -122,9 +122,18 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This method **should** update cart
+  #cart_clearance = []
+  index = 1 
+  
+  while index < cart.count do
+    if cart[index][:clearance]
+      cart[index][:price] -= (cart[index][:price] / 5).round(2)
+    end
+    index += 1 
+  end
+  
+  cart
+  #cart_clearance
 end
 
 def checkout(cart, coupons)
