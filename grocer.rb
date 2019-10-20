@@ -105,7 +105,7 @@ def calculation(item, coupon)
       pp two_hashes
     end
   else
-    # two_hashes << item
+    two_hashes << item
     # pp two_hashes
     
     # with = item
