@@ -112,15 +112,12 @@ def apply_coupons(cart, coupons)
       cart_coupons << cart[index]
     else
       item = cart[index]
-      # pp item
       coupon = coupons_hash[item[:item]]
-      # pp coupon
       two_hashes = calculation(item, coupon)
       cart_coupons += two_hashes
     end
     index += 1 
   end
-  # pp cart_coupons
   cart_coupons
 end
 
