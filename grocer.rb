@@ -95,12 +95,15 @@ def calculation(item, coupon)
       without = 0
       with = 1
       
-      two_hashes[without]
-      two_hashes[0][:count] = items_count_without
+      two_hashes[without][:item] = item[:item]
+      two_hashes[without][:price] = item[:price]
+      two_hashes[without][:clearance] = item[:clearance]
+      two_hashes[without][:count] = items_count_without
       
-      two_hashes[1][:item] += " W/COUPON"
-      two_hashes[1][:price] = item_price_with
-      two_hashes[1][:count] = items_count_with
+      two_hashes[with][:item] = item[:item] + " W/COUPON"
+      two_hashes[with][:price] = item_price_with
+      two_hashes[with][:clearance] = item[:clearance]
+      two_hashes[with][:count] = items_count_with
       pp two_hashes
       # without = item
       # without[:count] = items_count_without
