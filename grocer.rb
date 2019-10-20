@@ -76,8 +76,6 @@ def calculation(item, coupon)
   item_price_with = coupon[:cost] / coupon[:num]
   
   if item[:count] >= coupon[:num]
-    
-    # two_hashes = [{}, {}]
     without = two_hashes[0]
     with = two_hashes[1]
     
@@ -90,12 +88,9 @@ def calculation(item, coupon)
     with[:price] = item_price_with
     with[:clearance] = item[:clearance]
     with[:count] = items_count_with
-    
   else
-    # two_hashes << item
     two_hashes = [item]
   end
-  
   two_hashes
 end
 
