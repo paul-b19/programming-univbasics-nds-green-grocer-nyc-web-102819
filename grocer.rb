@@ -94,7 +94,7 @@ def calculation(item, coupon)
       
       without = 0
       with = 1
-      
+      pp two_hashes
       two_hashes[without][:item] = item[:item]
       two_hashes[without][:price] = item[:price]
       two_hashes[without][:clearance] = item[:clearance]
