@@ -100,7 +100,7 @@ def calculation(item, coupon)
       with = item
       pp with
       with[:item] += " W/COUPON"
-      # pp with
+      pp with
       with[:price] = item_price_with
       # pp with
       with[:count] = items_count_with
