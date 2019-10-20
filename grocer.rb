@@ -160,6 +160,6 @@ def checkout(cart, coupons)
     total -= total / 10
   end
   
-  puts total
+  p total
   total
 end
